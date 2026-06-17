@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --scrollbar-thumb: #334155;
+    --scrollbar-track: transparent;
+  }
+  * { box-sizing: border-box; }
+  html { font-family: 'Inter', system-ui, sans-serif; }
+  body { @apply bg-slate-950 text-slate-100 antialiased; margin: 0; }
+
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+  ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 4px; }
+}
+
+@layer utilities {
+  .bubble-out {
+    @apply bg-brand-600 text-white rounded-2xl rounded-br-sm px-4 py-2 max-w-xs lg:max-w-md;
+  }
+  .bubble-in {
+    @apply bg-slate-800 text-slate-100 rounded-2xl rounded-bl-sm px-4 py-2 max-w-xs lg:max-w-md;
+  }
+  .glass {
+    @apply bg-slate-900/80 backdrop-blur-md border border-slate-700/50;
+  }
+}
